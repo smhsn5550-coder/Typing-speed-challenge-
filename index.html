@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lords Mobile Store</title>
+
+<style>
+body{
+margin:0;
+font-family:system-ui;
+background:#070b10;
+color:white;
+}
+
+header{
+text-align:center;
+padding:20px;
+background:#111827;
+}
+
+.container{
+padding:15px;
+}
+
+.card{
+background:#111827;
+margin:10px 0;
+padding:15px;
+border-radius:12px;
+}
+
+button{
+padding:10px 15px;
+border:0;
+border-radius:8px;
+cursor:pointer;
+font-weight:bold;
+}
+
+.whatsapp{
+background:#25D366;
+color:black;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Lords Mobile Store</h1>
+<p>متجر شراء الماس والجواهر والموارد</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>💎 الماس</h2>
+<p>أفضل سعر + تسليم سريع</p>
+<button class="whatsapp" onclick="order('الماس')">اطلب عبر واتساب</button>
+</div>
+
+<div class="card">
+<h2>💠 الجواهر</h2>
+<p>عروض يومية قوية</p>
+<button class="whatsapp" onclick="order('الجواهر')">اطلب عبر واتساب</button>
+</div>
+
+<div class="card">
+<h2>⚙️ الموارد</h2>
+<p>تسليم فوري داخل اللعبة</p>
+<button class="whatsapp" onclick="order('الموارد')">اطلب عبر واتساب</button>
+</div>
+
+</div>
+
+<script>
+function order(item){
+let number = "201000000000"; // غير الرقم ده لرقمك
+let msg = "مرحبا أريد طلب: " + item;
+window.open("https://wa.me/" + number + "?text=" + encodeURIComponent(msg));
+}
+</script>
+
+</body>
+</html>
